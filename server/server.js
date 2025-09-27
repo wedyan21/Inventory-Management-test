@@ -20,10 +20,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors({
-  origin: 'https://explosion-artificial-knife-every.trycloudflare.com/'
-}));
-
+app.use(cors()); // يسمح لأي دومين
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
